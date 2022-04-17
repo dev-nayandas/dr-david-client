@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import Blogs from '../Blogs/Blogs';
+
 
 
 const Header = () => {
@@ -7,11 +9,11 @@ const Header = () => {
         
         <Navbar sticky="top" bg="primary" variant="dark">
         <Container>
-        <Navbar.Brand href="#home">Dr. David</Navbar.Brand>
+        <Navbar.Brand href='/home'>Dr. David</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Services</Nav.Link>
-          <Nav.Link href="#features">Blogs</Nav.Link>
-          <Nav.Link href="#pricing">Aboute Me</Nav.Link>
+          <Nav.Link href="/services">Services</Nav.Link>
+          <Nav.Link href="/blogs">Blogs</Nav.Link>
+          <Nav.Link href="/aboutMe">Aboute Me</Nav.Link>
         </Nav>
         </Container>
       </Navbar>
