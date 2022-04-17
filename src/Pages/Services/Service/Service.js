@@ -1,26 +1,36 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Button, Card, CardGroup, Col, Row } from 'react-bootstrap';
+import './Service.css'
 
-const Service = ({service}) => {
-    const{name, id ,price,description,img} = service;
-    return ( 
-        <CardGroup>
-  <Card>
-    <Card.Img variant="top" src={img} />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  
-</CardGroup>
-    );
+const Service = ({ service }) => {
+  const{name,img, id, price, description} = service;
+  return (
+    <CardGroup className='w-25'>
+    
+    <Card>
+      <Card.Img variant="top" src={img} />
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+          {description}
+        </Card.Text>
+      </Card.Body>
+      <Card.Footer>
+        <small className="text-muted">{price}</small>
+      </Card.Footer>
+    </Card>
+  </CardGroup>
+
+
+    // <div className=''>
+    //   <img src={img}></img>
+    //   <h2>{name}</h2>
+    //   <h4>{price}</h4>
+    //   <p><small>{description}</small></p>
+    //   <button>Book Me</button>
+    // </div>
+    
+  );
 };
 
 export default Service;
