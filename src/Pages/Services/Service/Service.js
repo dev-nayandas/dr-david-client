@@ -16,7 +16,8 @@ const Service = ({ service }) => {
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-        <small className="text-muted">{price}</small>
+        <small className="text-muted">{price}</small><br></br>
+        <Button>Book Me</Button>
       </Card.Footer>
     </Card>
   </CardGroup>
