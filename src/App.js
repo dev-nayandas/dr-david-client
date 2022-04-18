@@ -10,7 +10,9 @@ import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register/Register';
-import Services from './Pages/Services/Services'
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import Services from './Pages/Services/Services';
+
 
 function App() {
   return (
@@ -20,9 +22,18 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/services/:servicesId' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/services/:servicesId' element={
+          
+         <RequireAuth>
+           <CheckOut></CheckOut>
+         </RequireAuth>
+          
+        
+
+        }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/aboutme' element={<AboutMe></AboutMe>}></Route>
+        <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<Eror404></Eror404>}></Route>
