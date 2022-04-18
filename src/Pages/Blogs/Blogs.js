@@ -3,7 +3,9 @@ import { Table } from 'react-bootstrap';
 
 const Blogs = () => {
     return (
+      
         <div>
+          <h3 className='text-center mt-3'>Differnces between Authorization and Authentication</h3>
             <Table striped bordered hover>
   <thead>
     <tr>
@@ -47,14 +49,14 @@ const Blogs = () => {
     
   </tbody>
 </Table>
-<h3>Why we are using Firebase?</h3>
+<h3 className='text-center'>Why we are using Firebase?</h3>
 <p>1. With Firebase, it's pretty simple to connect and use built-in third-party authentication providers, including Google, Facebook, Twitter, among others.
     2.Firebase is a good choice if you want to deploy a working product on the cloud rapidly.
     3.As a Google Cloud service, it also gives you access to other Google products and features, like Google Drive and Sheets.
     4. Firebase the latest platform which has effective tools to develop Mobile and Web Applications.
     5.  It is built to help developers to share various features between cross-platform apps related to Databases, Config, and Notifications.
 </p>
-<h3> What are the other Services of Firebase?</h3>
+<h3 className='text-center'> What are the other Services of Firebase?</h3>
     
     <p>
        
